@@ -90,6 +90,42 @@
                 /* margin-left: -50%; */
             }   
         }
+
+        .three-col-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2em;
+            width: 100%;
+        }
+
+        @media screen and (width < 431px) {
+            .three-col-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .three-col-grid .img-square {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .three-col-grid .img-square img {
+            width: 100%;
+        }
+
+        .img-square::after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+        }
+
+        .rect-img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
     </style>
 </head>
 <body>
