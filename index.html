@@ -4,17 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=100, initial-scale=1.0">
     <title>Tapp Builds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <style>
         html, body, * {
             padding:0;
             margin:0;
         }
 
-        #hero {
-            /* width:100vw;
-            height: 100vh;
-            overflow: hidden; */
+        h1, h2, h3, h4, h5, h6, p, li {
+            font-family: "Quicksand", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+        }
 
+        h1 {
+            font-size: 72px;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 36px;
+        }
+
+        p, li {
+            font-size: 18px;
+        }
+
+        .p-2 {
+            padding: 1em 2em;
+        }
+
+        #hero {
             display:flex;
             position:fixed;
             left:0px;
@@ -47,6 +70,7 @@
             z-index: 999;
             color: white;
             text-align: center;
+            font-size: 72px;
         }
 
         @media sceen and (orientation: landscape) {
