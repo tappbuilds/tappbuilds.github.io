@@ -307,7 +307,7 @@
     <section id="hero">
         <div class="hero-wrapper">
             <img src="images/chaska_1.webp" alt="chaska waterfall project">
-            <div class="overlay">
+            <div id="hero-overlay" class="overlay">
                 <svg version="1.1" id="tappbuildssquarelogo" class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 67.855 72.813" enable-background="new 0 0 67.855 72.813" xml:space="preserve">
                     <path id="outline" d="M67.855,61.832H0V0h67.855V61.832z M1.594,60.238h64.668V1.594H1.594V60.238z"/>
                     <g id="t">
@@ -419,6 +419,7 @@
     <script>
         let tapemeasuremenu = document.getElementById('tapemeasuremenu');
         let mainmenu = document.getElementById('mainmenu');
+        var heroOverlay = document.getElementById('hero-overlay');
         mainmenu.style.left = '-200px';
 
         tapemeasuremenu.addEventListener('click', function(){
@@ -428,7 +429,34 @@
             } else {
                 mainmenu.style.left = '-200px';
             }
-        })
+        });
+
+        function fadeOutOnScroll(element) {
+            
+            if (!element) {
+                return;
+            }
+            
+            var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
+            var elementHeight = element.offsetHeight;
+            var scrollTop = document.documentElement.scrollTop;
+            var opacity = 1;
+            
+            if (scrollTop > distanceToTop) {
+                // I actually want it to fade out pretty quickly, so I'm dividing the height by 16
+                opacity = 1 - (scrollTop - distanceToTop) / (elementHeight / 16);
+            }
+            
+            if (opacity >= 0) {
+                element.style.opacity = opacity;
+            }
+        }
+
+        function scrollHandler() {
+            fadeOutOnScroll(heroOverlay);
+        }
+
+        window.addEventListener('scroll', scrollHandler);
     </script>
 </body>
 </html>
