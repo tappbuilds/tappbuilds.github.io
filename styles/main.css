@@ -232,8 +232,6 @@ nav ul a {
 }
 
 footer {
-    background-color: black;
-    color: white;
     z-index:9999;
     text-align:center;
 }
