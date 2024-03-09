@@ -36,6 +36,11 @@ p, li {
     padding: 1em;
 }
 
+.py-1\/2 {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
 .py-1 {
     padding-top: 1em;
     padding-bottom: 1em;
@@ -99,6 +104,27 @@ p, li {
 
 .short {
     width: 10px;
+}
+
+nav {
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    background-color: #000;
+    color: white;
+    z-index: 999;
+    top:55px;
+    left: -200px;
+    transition: left .5s;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: white;
 }
 
 #hero {
@@ -214,30 +240,4 @@ footer {
 
 footer p {
     font-weight: 500;
-}
-
-.py-1\/2 {
-    padding-top: .5em;
-    padding-bottom: .5em;
-}
-
-nav {
-    position: fixed;
-    width: 200px;
-    height: 100vh;
-    background-color: #000;
-    color: white;
-    z-index: 999;
-    top:55px;
-    left: -200px;
-    transition: left .5s;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav ul a {
-    text-decoration: none;
-    color: white;
 }
