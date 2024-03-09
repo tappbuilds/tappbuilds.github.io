@@ -1,0 +1,243 @@
+html, body, * {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 72px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+p, li {
+    font-size: 18px;
+}
+
+.p-2 {
+    padding: 1em 2em;
+}
+
+.px-2 {
+    padding: 2em;
+}
+
+.p-1 {
+    padding: 1em;
+}
+
+.py-1 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.px-1 {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#topbar {
+    background-color: black;
+    position:fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    z-index: 999;
+    justify-content: space-between;
+}
+
+#topbar #tappbuildslandscapelogo {
+    display:flex;
+}
+
+#topbar #tappbuildslandscapelogo h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    display: inline-block;
+    padding-top: 2px;
+    padding-left: .25em;
+}
+
+#topbar .logomark {
+    fill: white;
+    width: 40px;
+    height: 40px;
+}
+
+#tapemeasuremenu {
+    width: 31px;
+    height: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 11px;
+    padding-right: 11px;
+    padding-bottom: 11px;
+    cursor: pointer;
+}
+
+#tapemeasuremenu .line {
+    background-color: white;
+    height: 1px;
+}
+
+.long {
+    width: 20px;
+}
+
+.short {
+    width: 10px;
+}
+
+#hero {
+    display:flex;
+    left:0px;
+    top:0px;
+    width:100%;
+    overflow:hidden;
+    height:100vh;
+    justify-content:center;
+    align-items:center;
+}
+
+#hero img {
+    width: 100vw;
+    height: auto;
+}
+
+#hero .overlay .overlay-wrapper {
+    position: relative;
+}
+
+#hero .overlay {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    width: -webkit-fill-available;
+    width: fill-available;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+}
+
+#hero .overlay h1 {
+    z-index: 99;
+    color: white;
+    text-align: center;
+    font-size: 72px;
+}
+
+#hero .overlay .logo {
+    max-width: 300px;
+    width: 50%;
+    /* fill: #55a9de; */
+    fill: white;
+}
+
+@media sceen and (orientation: landscape) {
+    #hero img {
+        margin-top: -9%;
+        width: 100vw;
+        height: auto;
+    }
+}
+
+@media (min-aspect-ratio: 1/1) and (max-aspect-ratio: 4/3) {
+    #hero img {
+        height:100vh;
+        width: auto;
+    }
+}
+
+@media screen and (orientation: portrait) {
+        #hero img {
+        height:100vh;
+        width: auto;
+    }   
+}
+
+.three-col-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+    width: 100%;
+}
+
+@media screen and (width < 431px) {
+    .three-col-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.three-col-grid .img-square {
+    overflow: hidden;
+    position: relative;
+}
+
+.three-col-grid .img-square img {
+    width: 100%;
+}
+
+.img-square::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.rect-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    z-index:9999;
+    text-align:center;
+}
+
+footer p {
+    font-weight: 500;
+}
+
+.py-1\/2 {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+nav {
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    background-color: #000;
+    color: white;
+    z-index: 999;
+    top:55px;
+    left: -200px;
+    transition: left .5s;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: white;
+}
