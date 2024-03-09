@@ -127,6 +127,10 @@ nav ul a {
     color: white;
 }
 
+#main {
+    padding-top: 55px;
+}
+
 #hero {
     display:flex;
     left:0px;
