@@ -148,7 +148,7 @@ nav ul a {
 
 .projectImages img{
     width: 100%;
-    max-width: 1300px;
+    max-width: 1600px;
     margin: auto;
 }
 
@@ -224,13 +224,14 @@ nav ul a {
 .three-col-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 2em;
+    gap: 5em;
     width: 100%;
 }
 
 @media screen and (width < 431px) {
     .three-col-grid {
         grid-template-columns: 1fr;
+        gap: 2em;
     }
 }
 
@@ -257,7 +258,7 @@ nav ul a {
 }
 
 #projects {
-    max-width: 1300px;
+    max-width: 1600px;
     width: 100%;
 }
 
@@ -272,7 +273,7 @@ nav ul a {
 }
 
 .textblock-wrapper {
-    max-width: 1300px;
+    max-width: 1600px;
 }
 
 footer {
