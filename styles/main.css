@@ -181,7 +181,7 @@ nav ul a {
     align-items: center;
     width: -webkit-fill-available;
     width: fill-available;
-    height: calc(100% + 14px);
+    height: 100vh;
     background-color: rgba(0,0,0,.5);
 }
 
