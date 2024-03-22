@@ -63,7 +63,13 @@
     </nav>
         <section id="hero">
             <div class="hero-wrapper">
-                <img src="images/chaska_1.webp" alt="chaska waterfall project">
+                <img 
+                    srcset="images/chaska_1_640.webp 640w, images/chaska_1_768.webp 768w, images/chaska_1_1024.webp 1024w"
+                    sizes="(max-width: 640px) 640px,
+                    (max-width: 768px) 768px,
+                    1024px"
+                    src="images/chaska_1_1024.webp" alt="chaska waterfall project"
+                />
                 <div id="hero-overlay" class="overlay">
                     <svg version="1.1" id="tappbuildssquarelogo" class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 67.855 72.813" enable-background="new 0 0 67.855 72.813" xml:space="preserve">
                         <path id="outline" d="M67.855,61.832H0V0h67.855V61.832z M1.594,60.238h64.668V1.594H1.594V60.238z"/>
