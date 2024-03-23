@@ -198,6 +198,7 @@ nav ul a {
 #hero .overlay .logo {
     max-width: 300px;
     width: 50%;
+    height: 50%;
     /* fill: #55a9de; */
     fill: white;
 }
