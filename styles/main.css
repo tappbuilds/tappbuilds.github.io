@@ -20,6 +20,13 @@ h2 {
     font-size: 36px;
 }
 
+.sr-only {
+    width:0;
+    height:0;
+    position: absolute;
+    left: -1000px;
+}
+
 p, li {
     font-size: 18px;
 }
