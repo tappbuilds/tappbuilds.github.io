@@ -87,12 +87,6 @@ p, li {
     padding-left: .25em;
 }
 
-#topbar .logomark {
-    fill: white;
-    width: 40px;
-    height: 40px;
-}
-
 .topbarunderlay {
     height: 55px;
 }
