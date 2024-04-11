@@ -5,7 +5,7 @@ html, body, * {
 }
 
 h1, h2, h3, h4, h5, h6, p, li {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
@@ -87,11 +87,7 @@ p, li {
 
 #topbar #tappbuildslandscapelogo h1 {
     font-size: 24px;
-    font-weight: 600;
-    color: white;
-    display: inline-block;
-    padding-top: 2px;
-    padding-left: .25em;
+    padding-top: 3px;
 }
 
 .topbarunderlay {
