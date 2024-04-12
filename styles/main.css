@@ -73,7 +73,7 @@ p, li {
     position:fixed;
     left: 0;
     top: 0;
-    width: calc(100vw - 1em);
+    width: 100vw;
     display: flex;
     z-index: 999;
     justify-content: space-between;
@@ -144,7 +144,8 @@ nav ul a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(100vw - 1em);
+    /* width: calc(100vw - 1em); */
+    width: 100vw;
 }
 
 .projectImages {
@@ -208,6 +209,17 @@ nav ul a {
     fill: white;
 }
 
+#projects {
+    /* max-width: 1300px; */
+    padding: 6rem;
+    width: 100%;
+}
+
+#projects a {
+    text-decoration: none;
+    color: black;
+}
+
 @media sceen and (orientation: landscape) {
     #hero img {
         margin-top: -9%;
@@ -233,19 +245,38 @@ nav ul a {
 .three-col-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 2em;
+    gap: 8rem;
     /* width: 100vw; */
+}
+
+@media screen and (width < 1025px) {
+    .three-col-grid {
+        gap: 5rem;
+    }
+
+    #projects {
+        padding: 4rem;
+    }
 }
 
 @media screen and (width < 769px) {
     .three-col-grid {
-        gap: 2em;
+        gap: 5rem;
+    }
+
+    #projects {
+        padding: 3rem;
     }
 }
 
 @media screen and (width < 431px) {
     .three-col-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    #projects {
+        padding: 1rem;
     }
 }
 
@@ -269,16 +300,6 @@ nav ul a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-#projects {
-    max-width: 1300px;
-    width: 100%;
-}
-
-#projects a {
-    text-decoration: none;
-    color: black;
 }
 
 .textblock {
