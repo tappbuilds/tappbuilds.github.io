@@ -330,12 +330,10 @@ nav ul a {
     text-align: center;
 }
 
-footer {
-    z-index:9999;
-    text-align:center;
-    width: calc(100vw - 1em);
-}
-
-footer p {
-    font-weight: 500;
+.contact {
+    width: 95vw;
+    height: 90vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
