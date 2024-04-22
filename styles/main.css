@@ -149,15 +149,24 @@ nav ul a {
 }
 
 .projectImages {
-    display: flex;
+    display: grid;
     flex-direction: column;
     gap: 1em;
+    max-width: 1200px;
     width: calc(100vw - 2em);
+}
+
+.projectImages .hero {
+    aspect-ratio: 16/8;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .projectImages img{
     width: 100%;
-    max-width: 1300px;
+    /* max-width: 1200px; */
     margin: auto;
 }
 
@@ -265,6 +274,12 @@ nav ul a {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 8rem;
     /* width: 100vw; */
+}
+
+.compact-three-col-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
 }
 
 @media screen and (width < 1025px) {
