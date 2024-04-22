@@ -218,10 +218,18 @@ nav ul a {
     fill: white;
 }
 
-#projects {
+#projectsGrid {
     /* max-width: 1300px; */
     padding: 6rem;
     width: 100%;
+}
+
+#projects {
+    width: 100%;
+}
+
+#projects .three-col-grid {
+    gap: 1rem;
 }
 
 #projects a {
@@ -287,7 +295,7 @@ nav ul a {
         gap: 5rem;
     }
 
-    #projects {
+    #projectsGrid {
         padding: 4rem;
     }
 }
@@ -297,7 +305,7 @@ nav ul a {
         gap: 5rem;
     }
 
-    #projects {
+    #projectsGrid {
         padding: 3rem;
     }
 }
@@ -308,7 +316,7 @@ nav ul a {
         gap: 2rem;
     }
 
-    #projects {
+    #projectsGrid {
         padding: 1rem;
     }
 }
