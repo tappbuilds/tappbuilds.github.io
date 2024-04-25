@@ -277,6 +277,12 @@ nav ul a {
     }   
 }
 
+.two-col-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
 .three-col-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
