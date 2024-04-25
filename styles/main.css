@@ -229,7 +229,7 @@ nav ul a {
 }
 
 #projects .three-col-grid {
-    gap: 1rem;
+    gap: 4rem;
 }
 
 #projects a {
@@ -324,6 +324,10 @@ nav ul a {
 
     #projectsGrid {
         padding: 1rem;
+    }
+
+    #projects .three-col-grid {
+        gap: 1rem;
     }
 }
 
