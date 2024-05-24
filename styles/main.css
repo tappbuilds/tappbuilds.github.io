@@ -255,11 +255,39 @@ nav ul a {
     transition: opacity 0.5s;
 }
 
-@media sceen and (orientation: landscape) {
+.contact {
+    /* width: 95vw; */
+    /* height: 90vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4em;
+}
+
+.contact img {
+    max-width: 640px;
+    width: 50%;
+}
+
+.contact p {
+    padding: 2em;
+}
+
+@media (orientation: landscape) {
     #hero img {
         margin-top: -9%;
         width: 100vw;
         height: auto;
+    }
+
+    .contact {
+        flex-direction: row;
+        height: 90vh;
+    }
+
+    .contact img {
+        height: 100%;
     }
 }
 
@@ -314,6 +342,15 @@ nav ul a {
     #projectsGrid {
         padding: 3rem;
     }
+
+    .contact {
+        padding: 2em;
+    }
+    
+    .contact img {
+        max-width: 640px;
+        width: 100%;
+    }
 }
 
 @media screen and (width < 431px) {
@@ -361,12 +398,4 @@ nav ul a {
 .textblock-wrapper {
     max-width: 1300px;
     text-align: center;
-}
-
-.contact {
-    width: 95vw;
-    height: 90vh;
-    display: grid;
-    justify-content: center;
-    align-items: center;
 }
