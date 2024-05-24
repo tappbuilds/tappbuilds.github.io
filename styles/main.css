@@ -268,6 +268,7 @@ nav ul a {
 .contact img {
     max-width: 640px;
     width: 50%;
+    height: auto;
 }
 
 .contact p {
@@ -280,13 +281,16 @@ nav ul a {
         width: 100vw;
         height: auto;
     }
+}
 
+@media (orientation: landscape) and (min-aspect-ratio: 16/9) {
     .contact {
         flex-direction: row;
         height: 90vh;
     }
 
     .contact img {
+        width: auto;
         height: 100%;
     }
 }
