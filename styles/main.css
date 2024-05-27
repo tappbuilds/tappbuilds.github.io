@@ -6,7 +6,7 @@ html, body, * {
 
 h1, h2, h3, h4, h5, h6, p, li {
     /* font-family: "Montserrat", sans-serif; */
-    font-family: "Georgia", serif;
+    font-family: "Tahoma", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
@@ -53,6 +53,11 @@ p, li {
 .py-1 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+.py-2 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .pt-1 {
@@ -320,6 +325,14 @@ nav ul a {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 8rem;
     /* width: 100vw; */
+}
+
+.max-960 { 
+    max-width: 960px;
+}
+
+.m-center {
+    margin: auto;
 }
 
 .compact-three-col-grid {
