@@ -371,9 +371,9 @@ nav ul a {
 }
 
 @media screen and (width < 431px) {
-    .three-col-grid {
+    .three-col-grid, .compact-three-col-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1rem;
     }
 
     #projectsGrid {
