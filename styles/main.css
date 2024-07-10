@@ -176,7 +176,6 @@ nav ul a {
 }
 
 #hero {
-    display:flex;
     left:0px;
     top:0px;
     width:100vw;
@@ -184,11 +183,18 @@ nav ul a {
     height:100vh;
     justify-content:center;
     align-items:center;
+    padding-top: 44px;
 }
 
-#hero img {
+.hero-wrapper {
+    position:relative;
+    height: 100vh;
+}
+
+#hero .hero-wrapper > img {
     width: 100vw;
-    height: auto;
+    height: 100vh;
+    object-fit: cover;
 }
 
 #hero .overlay .overlay-wrapper {
@@ -200,11 +206,11 @@ nav ul a {
     display: flex;
     top: 0;
     left: 0;
+    bottom: 3px;
     justify-content: center;
     align-items: center;
     width: -webkit-fill-available;
     width: fill-available;
-    height: 100vh;
     background-color: rgba(0,0,0,.5);
 }
 
@@ -281,10 +287,10 @@ nav ul a {
 }
 
 @media (orientation: landscape) {
-    #hero img {
-        margin-top: -9%;
+    #hero > img {
         width: 100vw;
-        height: auto;
+        height: 100vh;
+        object-fit:cover;
     }
 }
 
@@ -298,20 +304,6 @@ nav ul a {
         width: auto;
         height: 100%;
     }
-}
-
-@media (min-aspect-ratio: 1/1) and (max-aspect-ratio: 4/3) {
-    #hero img {
-        height:100vh;
-        width: auto;
-    }
-}
-
-@media screen and (orientation: portrait) {
-        #hero img {
-        height:100vh;
-        width: auto;
-    }   
 }
 
 .two-col-grid {
