@@ -132,7 +132,7 @@ nav {
     background-color: #FFF;
     color: #000;
     z-index: 999;
-    top:55px;
+    top:52px;
     left: -100px;
     transition: left .5s;
 }
