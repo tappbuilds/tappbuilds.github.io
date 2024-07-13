@@ -135,6 +135,7 @@ nav {
     top:52px;
     left: -100px;
     transition: left .5s;
+    box-shadow: 0 0 4px 4px rgba(0,0,0,0.2);
 }
 
 nav ul {
