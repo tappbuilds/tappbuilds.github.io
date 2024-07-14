@@ -79,7 +79,7 @@ p, li {
     top: 0;
     width: 100vw;
     display: flex;
-    z-index: 999;
+    z-index: 9999;
     justify-content: space-between;
 }
 
@@ -130,7 +130,7 @@ nav {
     height: 100vh;
     background-color: #FFF;
     color: #000;
-    z-index: 999;
+    z-index: 9999;
     top:52px;
     left: -100px;
     transition: left .5s;
