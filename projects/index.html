@@ -23,19 +23,19 @@
         </div>
         <div style="width: 30px; height: 30px;"></div>
     </section>
-    <nav id="mainmenu" class="p-1">
+    <nav id="mainmenu"  style="left: -200px">
         <ul>
-            <li class="py-1/2">
-                <a href="/">Home</a>
+            <li>
+                <a class="p-1" href="/">Home</a>
             </li>
-            <li class="py-1/2">
-                <a href="/projects">Projects</a>
+            <li>
+                <a class="p-1" href="/projects">Projects</a>
             </li>
-            <li class="py-1/2">
-                <a href="/about">About</a>
+            <li>
+                <a class="p-1" href="/about">About</a>
             </li>
-            <li class="py-1/2">
-                <a href="/contact">Contact</a>
+            <li>
+                <a class="p-1" href="/contact">Contact</a>
             </li>
         </ul>
     </nav>
@@ -130,6 +130,45 @@
                 mainmenu.style.left = '-200px';
             }
         });
+
+        // There is an issue with the bfcache that causes the menu state and the project hover state to persist
+        // when the user clicks the back button in their browser. I want it to go back to the original state.
+
+        // Since the user is navigating away from the page, I can try to add an event handler to anchors that
+        // will collapse the menu and ensure the hover state returns on click. I might have to prevent default
+        // and manually follow the location using js. We'll see...
+
+        function handleMenuItemClick(evt) {
+            evt.preventDefault();
+
+            // Get the menu and collapse it.
+            let mainmenu = document.getElementById('mainmenu');
+            mainmenu.style.left = '-200px';
+
+            let AnchorTag;
+
+            if (evt.target.nodeName == 'A') {
+                AnchorTag = evt.target;
+            } else {
+                evt.target.style.opacity = 0;
+                AnchorTag = evt.target.closest('a');
+            }
+
+            window.location = AnchorTag.href;
+        }
+
+        let menuAnchors = document.querySelectorAll('#mainmenu a');
+        let projectGridAnchors = document.querySelectorAll('#projectsGrid a');
+
+        menuAnchors.forEach(menuAnchor => {
+            menuAnchor.addEventListener('click', handleMenuItemClick)
+        });
+        
+        projectGridAnchors.forEach(projectGridAnchor => {
+            console.log(projectGridAnchor);
+            projectGridAnchor.addEventListener('click', handleMenuItemClick)
+        });
+
     </script>
 </body>
 </html>

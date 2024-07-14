@@ -5,7 +5,6 @@ html, body, * {
 }
 
 h1, h2, h3, h4, h5, h6, p, li {
-    /* font-family: "Montserrat", sans-serif; */
     font-family: "Tahoma", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -80,7 +79,7 @@ p, li {
     top: 0;
     width: 100vw;
     display: flex;
-    z-index: 999;
+    z-index: 9999;
     justify-content: space-between;
 }
 
@@ -131,26 +130,32 @@ nav {
     height: 100vh;
     background-color: #FFF;
     color: #000;
-    z-index: 999;
-    top:55px;
+    z-index: 9999;
+    top:52px;
     left: -100px;
     transition: left .5s;
+    box-shadow: 0 0 4px 4px rgba(0,0,0,0.2);
 }
 
 nav ul {
     list-style: none;
 }
 
+nav ul li {
+    border-bottom: 1px solid #CCC;
+}
+
 nav ul a {
     text-decoration: none;
+    color: #000;
+    display: inline-block;
+    width: 100%;
 }
 
 #main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* width: calc(100vw - 1em); */
-    /* width: 100vw; */
 }
 
 .projectImages {
@@ -171,7 +176,6 @@ nav ul a {
 
 .projectImages img{
     width: 100%;
-    /* max-width: 1200px; */
     margin: auto;
 }
 
@@ -225,12 +229,10 @@ nav ul a {
     max-width: 350px;
     width: 50%;
     height: 50%;
-    /* fill: #55a9de; */
     fill: white;
 }
 
 #projectsGrid {
-    /* max-width: 1300px; */
     padding: 6rem;
     width: 100%;
 }
@@ -267,8 +269,6 @@ nav ul a {
 }
 
 .contact {
-    /* width: 95vw; */
-    /* height: 90vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -316,7 +316,6 @@ nav ul a {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 8rem;
-    /* width: 100vw; */
 }
 
 .max-960 { 
