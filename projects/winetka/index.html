@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Tapp Builds</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/main.css">
+</head>
+<body>
+    <section id="topbar" class="px-1 py-1/2">
+        <div id="tapemeasuremenu">
+            <div class="long line"></div>
+            <div class="short line"></div>
+            <div class="long line"></div>
+        </div>
+        <div id="tappbuildslandscapelogo">
+            <a href="/">
+                <h1><b>TAPP</b>builds</h1>
+            </a>
+        </div>
+        <div style="width: 30px; height: 30px;"></div>
+    </section>
+    <div class="topbarunderlay">&nbsp;</div>
+    <nav id="mainmenu"  style="left: -200px">
+        <ul>
+            <li>
+                <a class="p-1" href="/">Home</a>
+            </li>
+            <li>
+                <a class="p-1" href="/projects">Projects</a>
+            </li>
+            <li>
+                <a class="p-1" href="/about">About</a>
+            </li>
+            <li>
+                <a class="p-1" href="/contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <section id="main" class="px-1">
+        <section class="textblock py-1">
+            <section class="textblock-wrapper">
+                <h1>Winetka</h1>
+                <p class="sr-only">
+                    Chris created this backyard oasis filled with fun and relaxation for the whole family!
+                </p>
+                <p class="py-1">
+                    waterfall / plants / putting green
+                </p>
+            </section>
+        </section>
+        <section class="projectImages">
+            <img
+                srcset="../../images/winetka_1_640.webp 640w, ../../images/winetka_1_768.webp 768w, ../../images/winetka_1_1024.webp 1024w"
+                sizes="(max-width: 640px) 640px,
+                (max-width: 768px) 768px,
+                1024px"
+                src="../../images/winetka_1_1024.webp" alt="winetka stone steps"
+            />
+            <img
+                srcset="../../images/winetka_2_640.webp 640w, ../../images/winetka_2_768.webp 768w, ../../images/winetka_2_1024.webp 1024w"
+                sizes="(max-width: 640px) 640px,
+                (max-width: 768px) 768px,
+                1024px"
+                src="../../images/winetka_2_1024.webp" alt="winetka stone steps"
+            />
+            <img
+                srcset="../../images/winetka_3_640.webp 640w, ../../images/winetka_3_768.webp 768w, ../../images/winetka_3_1024.webp 1024w"
+                sizes="(max-width: 640px) 640px,
+                (max-width: 768px) 768px,
+                1024px"
+                src="../../images/winetka_3_1024.webp" alt="winetka stone steps"
+            />
+            <img
+                srcset="../../images/winetka_4_640.webp 640w, ../../images/winetka_4_768.webp 768w, ../../images/winetka_4_1024.webp 1024w"
+                sizes="(max-width: 640px) 640px,
+                (max-width: 768px) 768px,
+                1024px"
+                src="../../images/winetka_4_1024.webp" alt="winetka stone steps"
+            />
+        </section>
+    </section>
+    <script>
+        let tapemeasuremenu = document.getElementById('tapemeasuremenu');
+        let mainmenu = document.getElementById('mainmenu');
+        mainmenu.style.left = '-200px';
+
+        tapemeasuremenu.addEventListener('click', function(){
+
+            if(mainmenu.style.left == '-200px') {
+                mainmenu.style.left = '0';
+            } else {
+                mainmenu.style.left = '-200px';
+            }
+        });
+
+        // There is an issue with the bfcache that causes the menu state and the project hover state to persist
+        // when the user clicks the back button in their browser. I want it to go back to the original state.
+
+        // Since the user is navigating away from the page, I can try to add an event handler to anchors that
+        // will collapse the menu and ensure the hover state returns on click. I might have to prevent default
+        // and manually follow the location using js. We'll see...
+
+        function handleMenuItemClick(evt) {
+            evt.preventDefault();
+
+            // Get the menu and collapse it.
+            let mainmenu = document.getElementById('mainmenu');
+            mainmenu.style.left = '-200px';
+
+            let AnchorTag = evt.target;
+
+            window.location = AnchorTag.href;
+        }
+
+        let menuAnchors = document.querySelectorAll('#mainmenu a');
+
+        menuAnchors.forEach(menuAnchor => {
+            menuAnchor.addEventListener('click', handleMenuItemClick)
+        });
+    </script>
+</body>
+</html>
