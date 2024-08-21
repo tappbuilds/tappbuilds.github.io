@@ -73,7 +73,6 @@ p, li {
 }
 
 #topbar {
-    background-color: black;
     position:fixed;
     left: 0;
     top: 0;
@@ -86,13 +85,17 @@ p, li {
 #topbar #tappbuildslandscapelogo a {
     display: inline-block;
     text-decoration: none;
-    color: white;
     display: flex;
 }
 
 #topbar #tappbuildslandscapelogo h1 {
     font-size: 24px;
     padding-top: 3px;
+    color: #000;
+}
+
+#topbar #tappbuildslandscapelogo.homepageheaderlogo h1 {
+    color: #FFF;
 }
 
 .topbarunderlay {
@@ -150,6 +153,9 @@ nav ul a {
     color: #000;
     display: inline-block;
     width: 100%;
+}
+#tappbuildslandscapelogo.homepageheaderlogo h1 {
+    color: #FFF;
 }
 
 #main {
