@@ -381,7 +381,7 @@ nav#mainmenu.homepagemenu ul a {
     }
 
     #projectsGrid {
-        padding: 1rem;
+        padding: 0;
     }
 
     #projects .three-col-grid {
