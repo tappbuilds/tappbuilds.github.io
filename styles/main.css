@@ -413,10 +413,9 @@ nav#mainmenu.homepagemenu ul a {
 
 .textblock {
     display:flex;
-    justify-content: center;
+    width: 100%;
 }
 
 .textblock-wrapper {
     max-width: 1300px;
-    text-align: center;
 }
