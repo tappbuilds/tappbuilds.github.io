@@ -451,6 +451,7 @@ footer #instagramlogo {
 .textblock {
     display:flex;
     width: 100%;
+    max-width: 1200px;
 }
 
 .textblock-wrapper {
