@@ -223,7 +223,7 @@ nav#mainmenu.homepagemenu ul a {
     display: flex;
     top: 0;
     left: 0;
-    bottom: 3px;
+    bottom: 0;
     justify-content: center;
     align-items: center;
     width: -webkit-fill-available;
