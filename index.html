@@ -44,82 +44,19 @@
             </li>
         </ul>
     </nav>
-        <section id="hero">
-            <div class="hero-wrapper">
-                <img 
-                    srcset="images/clyde_hill_4_640.webp 640w, images/clyde_hill_4_768.webp 768w, images/clyde_hill_4_1024.webp 1024w"
-                    sizes="(max-width: 640px) 640px,
-                    (max-width: 768px) 768px,
-                    1024px"
-                    src="images/clyde_hill_4_1024.webp" alt="chaska waterfall project"
-                />
-                <div id="hero-overlay" class="overlay">
-                    <img src="images/tappbuilds_logomark.svg" class="logo" alt="tapp builds">
-                </div>
+    <section id="hero">
+        <div class="hero-wrapper">
+            <img 
+                srcset="images/clyde_hill_4_640.webp 640w, images/clyde_hill_4_768.webp 768w, images/clyde_hill_4_1024.webp 1024w"
+                sizes="(max-width: 640px) 640px,
+                (max-width: 768px) 768px,
+                1024px"
+                src="images/clyde_hill_4_1024.webp" alt="chaska waterfall project"
+            />
+            <div id="hero-overlay" class="overlay">
+                <img src="images/tappbuilds_logomark.svg" class="logo" alt="tapp builds">
             </div>
-        </section>
-    <section id="main" class="px-1 max-960 m-center">
-        <section class="textblock py-2">
-            <div class="textblock-wrapper">
-                <p>
-                    We create beautifully unique custom outdoor spaces pulling in the 
-                    natural aesthetic of the landscape around you.  We treat every project 
-                    like it is our own with great attention to detail, form and function. 
-                    If you can dream it, we can build it. We want you to love the outside 
-                    of your home and spend as much time there as you do the inside.
-                </p>
-            </div>
-        </section>
-        <section id="projects">
-            <h2 class="pt-2 pb-1">Projects</h2>
-            <div class="three-col-grid">
-                <a href="/projects/clyde-hill">
-                    <div class="img-square">
-                        <img class="rect-img"
-                            srcset="../../images/clyde_hill_4_640.webp 640w, ../../images/clyde_hill_4_768.webp 768w, ../../images/clyde_hill_4_1024.webp 1024w"
-                            sizes="(max-width: 640px) 640px,
-                            ((min-width: 641px) and (max-width: 768px)) 768px,
-                            1024px"
-                            src="../../images/clyde_hill_4_1024.webp" alt="Clyde hill waterfalls"
-                        />
-                        <div class="projectTitle">
-                            <p>Clyde Hill</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="/projects/enatai">
-                    <div class="img-square">
-                        <img class="rect-img"
-                            srcset="images/entenai_1_640.webp 640w, images/entenai_1_768.webp 768w, images/entenai_1_1024.webp 1024w"
-                            sizes="(max-width: 640px) 640px,
-                            (max-width: 768px) 768px,
-                            1024px"
-                            src="images/entenai_1_1024.webp" alt="Enatai stone path and plant design"
-                        />
-                        <div class="projectTitle">
-                            <p>Enatai</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="/projects/glendale">
-                    <div class="img-square">
-                        <img class="rect-img"
-                            srcset="images/glendale_1_640.webp 640w, images/glendale_1_768.webp 768w, images/glendale_1_1024.webp 1024w"
-                            sizes="(max-width: 640px) 640px,
-                            (max-width: 768px) 768px,
-                            1024px"
-                            src="images/glendale_1_1024.webp" alt="Glendale stone steps"
-                        />
-                        <div class="projectTitle">
-                            <p>Glendale</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </section>
-        <section id="services" class="py-2">
-            <p>pondless custom water features / synthetic turf putting greens / stone and paver patios / retaining walls / landscape design, intall / outdoor lighting</p>
-        </section>
+        </div>
     </section>
     <script>
         let tapemeasuremenu = document.getElementById('tapemeasuremenu');
@@ -135,33 +72,6 @@
                 mainmenu.style.left = '-200px';
             }
         });
-
-        function fadeOutOnScroll(element) {
-            
-            if (!element) {
-                return;
-            }
-            
-            var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
-            var elementHeight = element.offsetHeight;
-            var scrollTop = document.documentElement.scrollTop;
-            var opacity = 1;
-            
-            if (scrollTop > distanceToTop) {
-                // I actually want it to fade out pretty quickly, so I'm dividing the height by 16
-                opacity = 1 - (scrollTop - distanceToTop) / (elementHeight / 16);
-            }
-            
-            if (opacity >= 0) {
-                element.style.opacity = opacity;
-            }
-        }
-
-        function scrollHandler() {
-            fadeOutOnScroll(heroOverlay);
-        }
-
-        window.addEventListener('scroll', scrollHandler);
 
 
         // There is an issue with the bfcache that causes the menu state and the project hover state to persist
