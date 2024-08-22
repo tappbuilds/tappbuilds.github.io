@@ -299,6 +299,28 @@ nav#mainmenu.homepagemenu ul a {
     padding: 2em;
 }
 
+footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+footer #footerlogo {
+    width: 100%;
+}
+
+footer #instagramAnchor {
+    width: 48px;
+    height: 80px;
+    display: block;
+}
+
+footer #instagramlogo {
+    width: 100%;
+    height: 100%;
+}
+
 @media (orientation: landscape) {
     #hero > img {
         width: 100vw;
@@ -386,6 +408,19 @@ nav#mainmenu.homepagemenu ul a {
 
     #projects .three-col-grid {
         gap: 1rem;
+    }
+
+    footer {
+        display: block;
+        max-width: 100%;
+    }
+
+    footer img {
+        width: calc(100% - 4rem);
+    }
+
+    footer p:first-child {
+        padding-top: 2rem;
     }
 }
 
