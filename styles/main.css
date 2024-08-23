@@ -4,7 +4,7 @@ html, body, * {
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p, li {
+h1, h2, h3, h4, h5, h6, p, li, a {
     font-family: "Tahoma", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -310,6 +310,11 @@ footer {
 
 footer #footerlogo {
     width: 100%;
+}
+
+footer #emailAnchor {
+    text-decoration: none;
+    color: #000;
 }
 
 footer #instagramAnchor {
