@@ -83,16 +83,19 @@ p, li {
     background-color:white;
 }
 
+#topbar #tappbuildslandscapelogo {
+    width: 200px;
+    display: flex;
+}
+
 #topbar #tappbuildslandscapelogo a {
     display: inline-block;
     text-decoration: none;
     display: flex;
 }
 
-#topbar #tappbuildslandscapelogo h1 {
-    font-size: 24px;
-    padding-top: 3px;
-    color: #000;
+#topbar #tappbuildslandscapelogo img {
+    width: 100%;
 }
 
 #topbar #tappbuildslandscapelogo.homepageheaderlogo h1 {
