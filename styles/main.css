@@ -253,6 +253,11 @@ nav#mainmenu.homepagemenu ul a {
     width: 100%;
 }
 
+#projectsFlex {
+    width: 100%;
+    max-width: 960px;
+}
+
 #projects {
     width: 100%;
 }
@@ -303,12 +308,27 @@ nav#mainmenu.homepagemenu ul a {
 }
 
 footer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    /* display: grid; */
+    /* grid-template-columns: repeat(4, 1fr); */
+    display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     max-width: 1200px;
     margin: auto;
+}
+
+footer a {
+    display:block;
+    width: 25%;
+}
+
+footer>* {
+    width:25%;
+    padding: 1rem;
+}
+
+footer p {
+    text-align: center;
 }
 
 footer #footerlogo {
@@ -321,7 +341,7 @@ footer #emailAnchor {
 }
 
 footer #instagramAnchor {
-    width: 48px;
+    width: 80px;
     height: 80px;
     display: block;
 }
@@ -363,6 +383,18 @@ footer #instagramlogo {
     gap: 8rem;
 }
 
+.three-col-flex {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.three-col-flex .img-square {
+    width: 234px;
+    height: 234px;
+}
+
 .max-960 { 
     max-width: 960px;
 }
@@ -382,7 +414,7 @@ footer #instagramlogo {
         gap: 5rem;
     }
 
-    #projectsGrid {
+    #projectsGrid, #projectsFlex {
         padding: 4rem;
     }
 }
@@ -392,7 +424,7 @@ footer #instagramlogo {
         gap: 5rem;
     }
 
-    #projectsGrid {
+    #projectsGrid, #projectsFlex {
         padding: 3rem;
     }
 
@@ -412,12 +444,21 @@ footer #instagramlogo {
         gap: 1rem;
     }
 
-    #projectsGrid {
+    #projectsGrid, #projectsFlex {
         padding: 0;
     }
 
     #projects .three-col-grid {
         gap: 1rem;
+    }
+
+    .three-col-flex {
+        gap: 2rem;
+    }
+
+    .three-col-flex .img-square {
+        width: 320px;
+        height: 320px;
     }
 
     footer {
@@ -435,6 +476,11 @@ footer #instagramlogo {
 }
 
 .three-col-grid .img-square {
+    overflow: hidden;
+    position: relative;
+}
+
+.three-col-flex .img-square {
     overflow: hidden;
     position: relative;
 }
