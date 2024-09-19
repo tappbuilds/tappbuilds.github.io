@@ -319,7 +319,7 @@ footer {
 
 footer a {
     display:block;
-    width: 25%;
+    /* width: 25%; */
 }
 
 footer>* {
@@ -459,6 +459,14 @@ footer #instagramlogo {
     .three-col-flex .img-square {
         width: 320px;
         height: 320px;
+    }
+
+    footer>* {
+        width:100%;
+    }
+
+    footer p {
+        text-align: left;
     }
 
     footer {
