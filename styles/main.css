@@ -511,3 +511,23 @@ footer #instagramlogo {
 .textblock-wrapper {
     max-width: 1300px;
 }
+
+
+@media only screen 
+    and (width: 375px) 
+    and (height: 667px) 
+    and (-webkit-device-pixel-ratio: 2) {
+
+    footer {
+        display: block;
+        max-width: 100%;
+    }
+
+    footer img {
+        width: calc(100% - 4rem);
+    }
+
+    footer p:first-child {
+        padding-top: 2rem;
+    }
+}
