@@ -197,24 +197,35 @@ nav#mainmenu.homepagemenu ul a {
 }
 
 #hero {
-    left:0px;
-    top:0px;
-    width:100vw;
-    overflow:hidden;
-    height:100vh;
+    /* left:0px; */
+    /* top:0px; */
+    /* width:100vw; */
+    /* overflow:hidden; */
+    width: 100%;
+    /* max-width: 1400px; */
+    margin: auto;
+    /* height:100vh; */
     justify-content:center;
     align-items:center;
 }
 
 .hero-wrapper {
     position:relative;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 #hero .hero-wrapper > img {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
+}
+
+#hero video {
+    background-color: black;
+}
+
+#hero .hero-wrapper video {
+    width: 100%;
 }
 
 #hero .overlay .overlay-wrapper {
@@ -224,14 +235,28 @@ nav#mainmenu.homepagemenu ul a {
 #hero .overlay {
     position: absolute;
     display: flex;
+    flex-direction: column;
     top: 0;
     left: 0;
-    bottom: 0;
+    bottom: 4px;
     justify-content: center;
     align-items: center;
     width: -webkit-fill-available;
     width: fill-available;
     background-color: rgba(0,0,0,.5);
+    opacity: 0;
+    transition: opacity 2s ease-in;
+}
+
+#hero #replayVideo {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border: solid 2px white;
+    color: white;
+    border-radius: 8px;
+    background-color: transparent;
+    margin-top: 2rem;
+    cursor: pointer;
 }
 
 #hero .overlay h1 {

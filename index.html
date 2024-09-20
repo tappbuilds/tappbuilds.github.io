@@ -43,15 +43,19 @@
     </nav>
     <section id="hero">
         <div class="hero-wrapper">
-            <img 
+            <!-- <img 
                 srcset="images/clyde_hill_4_640.webp 640w, images/clyde_hill_4_768.webp 768w, images/clyde_hill_4_1024.webp 1024w"
                 sizes="(max-width: 640px) 640px,
                 (max-width: 768px) 768px,
                 1024px"
                 src="images/clyde_hill_4_1024.webp" alt="chaska waterfall project"
-            />
+            /> -->
+            <video id="heroVideo" autoplay="autoplay" muted>
+                <source src="videos/Tappbuilds.mp4" type="video/mp4">
+            </video>
             <div id="hero-overlay" class="overlay">
                 <img src="images/tappbuilds_logo_stacked_aug_2024.svg" class="logo" alt="Tapp Builds">
+                <button id="replayVideo">replay</button>
             </div>
         </div>
     </section>
@@ -68,7 +72,7 @@
     <script>
         let tapemeasuremenu = document.getElementById('tapemeasuremenu');
         let mainmenu = document.getElementById('mainmenu');
-        var heroOverlay = document.getElementById('hero-overlay');
+        // var heroOverlay = document.getElementById('hero-overlay');
         mainmenu.style.left = '-400px';
 
         tapemeasuremenu.addEventListener('click', function(){
@@ -119,6 +123,30 @@
             projectGridAnchor.addEventListener('click', handleMenuItemClick)
         });
 
+
+        /**
+         * 1. I want the video to automatically play. This is essentially done with "autoplay" and "muted"
+         * 2. I want the video to pause before it gets to the blackout screen.
+         * 3. Once the video is paused, I want the overlay to fade in.
+         */
+        let heroVideo = document.getElementById('heroVideo');
+        let heroOverlay = document.querySelector('#hero .overlay');
+        let replayButton = document.getElementById('replayVideo');
+
+        replayButton.addEventListener('click', function(){
+            heroOverlay.style.opacity = 0;
+            heroVideo.currentTime = 0;
+            heroVideo.play();
+        });
+
+        heroVideo.addEventListener('timeupdate', function(){
+            console.log(heroVideo.currentTime);
+
+            if (heroVideo.currentTime > 44) {
+                heroVideo.pause();
+                heroOverlay.style.opacity = 1;
+            }
+        });
     </script>
 </body>
 </html>
