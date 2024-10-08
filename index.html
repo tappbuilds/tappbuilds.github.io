@@ -43,18 +43,56 @@
     </nav>
     <section id="hero">
         <div class="hero-wrapper">
-            <img 
+            <!-- <img 
                 srcset="images/clyde_hill_4_640.webp 640w, images/clyde_hill_4_768.webp 768w, images/clyde_hill_4_1024.webp 1024w"
                 sizes="(max-width: 640px) 640px,
                 (max-width: 768px) 768px,
                 1024px"
                 src="images/clyde_hill_4_1024.webp" alt="chaska waterfall project"
-            />
+            /> -->
+            <video id="heroVideo" autoplay="autoplay" muted>
+                <source src="videos/Tappbuilds.mp4" type="video/mp4">
+            </video>
             <div id="hero-overlay" class="overlay">
                 <img src="images/tappbuilds_logo_stacked_aug_2024.svg" class="logo" alt="Tapp Builds">
+                <button id="replayVideo">replay</button>
             </div>
         </div>
     </section>
+    
+    <!-- <section id="main"> -->
+    <section id="homeprojects" class="py-1">
+        <ul>
+            <li>
+                <img class="rect-imga"
+                    srcset="../images/huntertown_6_640.webp 640w, ../images/huntertown_6_768.webp 768w, ../images/huntertown_6_1024.webp 1024w"
+                    sizes="(max-width: 640px) 640px,
+                    ((min-width: 641px) and (max-width: 768px)) 768px,
+                    1024px"
+                    src="../images/huntertown_6_1024.webp" alt="Clyde Hill back patio"
+                />
+            </li>
+            <li>
+                <img class="rect-imga"
+                    srcset="../images/huntertown_3_640.webp 640w, ../images/huntertown_3_768.webp 768w, ../images/huntertown_3_1024.webp 1024w"
+                    sizes="(max-width: 640px) 640px,
+                    (max-width: 768px) 768px,
+                    1024px"
+                    src="../images/huntertown_3_1024.webp" alt="Enanai stone path and plant design"
+                />
+            </li>
+            <li>
+                <img class="rect-imga"
+                    srcset="../images/huntertown_5_640.webp 640w, ../images/huntertown_5_768.webp 768w, ../images/huntertown_5_1024.webp 1024w"
+                    sizes="(max-width: 640px) 640px,
+                    (max-width: 768px) 768px,
+                    1024px"
+                    src="../images/huntertown_5_1024.webp" alt="Glendale stone steps"
+                />
+            </li>
+        </ul>
+    </section>
+    <!-- </section> -->
     <footer class="p-2">
         <a href="/">
             <img id="footerlogo" src="../images/tappbuilds_logo_sidebyside_aug_2024.svg" alt="Tapp Builds">
@@ -68,7 +106,8 @@
     <script>
         let tapemeasuremenu = document.getElementById('tapemeasuremenu');
         let mainmenu = document.getElementById('mainmenu');
-        var heroOverlay = document.getElementById('hero-overlay');
+
+        // var heroOverlay = document.getElementById('hero-overlay');
         mainmenu.style.left = '-400px';
 
         tapemeasuremenu.addEventListener('click', function(){
@@ -119,6 +158,29 @@
             projectGridAnchor.addEventListener('click', handleMenuItemClick)
         });
 
+        /**
+         * 1. I want the video to automatically play. This is essentially done with "autoplay" and "muted"
+         * 2. I want the video to pause before it gets to the blackout screen.
+         * 3. Once the video is paused, I want the overlay to fade in.
+         */
+        let heroVideo = document.getElementById('heroVideo');
+        let heroOverlay = document.querySelector('#hero .overlay');
+        let replayButton = document.getElementById('replayVideo');
+
+        replayButton.addEventListener('click', function(){
+            heroOverlay.style.opacity = 0;
+            heroVideo.currentTime = 0;
+            heroVideo.play();
+        });
+
+        heroVideo.addEventListener('timeupdate', function(){
+            console.log(heroVideo.currentTime);
+
+            if (heroVideo.currentTime > 44) {
+                heroVideo.pause();
+                heroOverlay.style.opacity = 1;
+            }
+        });
     </script>
 </body>
 </html>
