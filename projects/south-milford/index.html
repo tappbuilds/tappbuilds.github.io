@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Tapp Builds</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/main.css">
+</head>
+<body>
+    <section id="topbar" class="px-1 py-1/2">
+        <div id="tapemeasuremenu">
+            <div class="long line"></div>
+            <div class="short line"></div>
+            <div class="long line"></div>
+        </div>
+        <div id="tappbuildslandscapelogo">
+            <a href="/">
+                <img src="../../images/tappbuilds_logo_text_only.svg" alt="Tapp Builds">
+            </a>
+        </div>
+        <div style="width: 30px; height: 30px;"></div>
+    </section>
+    <div class="topbarunderlay">&nbsp;</div>
+    <nav id="mainmenu"  style="left: -200px">
+        <ul>
+            <li>
+                <a class="p-1" href="/">Home</a>
+            </li>
+            <li>
+                <a class="p-1" href="/about">About</a>
+            </li>
+            <li>
+                <a class="p-1" href="/projects">Projects</a>
+            </li>
+        </ul>
+    </nav>
+    <section id="main" class="px-1">
+        <section class="textblock py-1">
+            <section class="textblock-wrapper">
+                <h1>South Milford</h1>
+                <p class="sr-only">
+                    This putting green is perfect for a fun and relaxing evening with the kids!
+                </p>
+                <p class="py-1">
+                    Putting green
+                </p>
+            </section>
+        </section>
+        <section class="projectImages">
+                <img
+                    srcset="../../images/south_milford_1_640.webp 640w, ../../images/south_milford_1_768.webp 768w, ../../images/south_milford_1_1024.webp 1024w"
+                    sizes="(max-width: 640px) 640px,
+                    ((min-width: 641px) and (max-width: 768px)) 768px,
+                    1024px"
+                    src="../../images/south_milford_1_1024.webp" alt="South Milford putting green"
+                />
+                <div style="display:flex; height:375px; overflow:hidden; gap:1rem;">
+
+                    <img
+                        src="../../images/south_milford_2.jpg" alt="South Milford putting green at dusk"
+                        style="margin-top:-190px"
+                    />
+                    <img
+                        src="../../images/south_milford_3.jpg" alt="Fun on the South Milford Putting green"
+                    />
+                </div>
+        </section>
+    </section>
+    <footer class="p-2">
+        <a href="/">
+            <img id="footerlogo" src="../../images/tappbuilds_logo_sidebyside_aug_2024.svg" alt="Tapp Builds">
+        </a>
+        <p>612.670.0473</p>
+        <a id="emailAnchor" href="mailto:tappbuilds@gmail.com">tappbuilds@gmail.com</a>
+        <a id="instagramAnchor" href="https://www.instagram.com/tappbuilds/" class="py-1">
+            <img id="instagramlogo" src="../../images/instagram_logo.svg" alt="Tapp Builds instagram page">
+        </a>
+    </footer>
+    <script>
+        let tapemeasuremenu = document.getElementById('tapemeasuremenu');
+        let mainmenu = document.getElementById('mainmenu');
+        mainmenu.style.left = '-400px';
+
+        tapemeasuremenu.addEventListener('click', function(){
+
+            if(mainmenu.style.left == '-400px') {
+                mainmenu.style.left = '0';
+            } else {
+                mainmenu.style.left = '-400px';
+            }
+        });
+
+        // There is an issue with the bfcache that causes the menu state and the project hover state to persist
+        // when the user clicks the back button in their browser. I want it to go back to the original state.
+
+        // Since the user is navigating away from the page, I can try to add an event handler to anchors that
+        // will collapse the menu and ensure the hover state returns on click. I might have to prevent default
+        // and manually follow the location using js. We'll see...
+
+        function handleMenuItemClick(evt) {
+            evt.preventDefault();
+
+            // Get the menu and collapse it.
+            let mainmenu = document.getElementById('mainmenu');
+            mainmenu.style.left = '-400px';
+
+            let AnchorTag = evt.target;
+
+            window.location = AnchorTag.href;
+        }
+
+        let menuAnchors = document.querySelectorAll('#mainmenu a');
+
+        menuAnchors.forEach(menuAnchor => {
+            menuAnchor.addEventListener('click', handleMenuItemClick)
+        });
+    </script>
+</body>
+</html>
