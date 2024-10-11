@@ -207,19 +207,7 @@
         </a>
     </footer>
     <script>
-        let tapemeasuremenu = document.getElementById('tapemeasuremenu');
-        let mainmenu = document.getElementById('mainmenu');
-        mainmenu.style.left = '-400px';
-
-        tapemeasuremenu.addEventListener('click', function(){
-
-            if(mainmenu.style.left == '-400px') {
-                mainmenu.style.left = '0';
-            } else {
-                mainmenu.style.left = '-400px';
-            }
-        });
-
+        
         // There is an issue with the bfcache that causes the menu state and the project hover state to persist
         // when the user clicks the back button in their browser. I want it to go back to the original state.
 
@@ -246,12 +234,7 @@
             window.location = AnchorTag.href;
         }
 
-        let menuAnchors = document.querySelectorAll('#mainmenu a');
         let projectGridAnchors = document.querySelectorAll('#projectsGrid a');
-
-        menuAnchors.forEach(menuAnchor => {
-            menuAnchor.addEventListener('click', handleMenuItemClick)
-        });
         
         projectGridAnchors.forEach(projectGridAnchor => {
             projectGridAnchor.addEventListener('click', handleMenuItemClick)
