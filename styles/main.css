@@ -218,6 +218,7 @@ nav#mainmenu.homepagemenu ul a {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
+    object-position: center bottom;
 }
 
 #hero video {
@@ -245,7 +246,7 @@ nav#mainmenu.homepagemenu ul a {
     width: -webkit-fill-available;
     width: fill-available;
     background-color: rgba(0,0,0,.5);
-    opacity: 0;
+    opacity: 1;
     transition: opacity 2s ease-in;
 }
 
