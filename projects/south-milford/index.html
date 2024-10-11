@@ -15,20 +15,14 @@
 </head>
 <body>
     <section id="topbar" class="px-1 py-1/2">
-        <div id="tapemeasuremenu">
-            <div class="long line"></div>
-            <div class="short line"></div>
-            <div class="long line"></div>
-        </div>
         <div id="tappbuildslandscapelogo">
             <a href="/">
                 <img src="../../images/tappbuilds_logo_text_only.svg" alt="Tapp Builds">
             </a>
         </div>
-        <div style="width: 30px; height: 30px;"></div>
     </section>
     <div class="topbarunderlay">&nbsp;</div>
-    <nav id="mainmenu"  style="left: -200px">
+    <nav id="mainmenu">
         <ul>
             <li>
                 <a class="p-1" href="/">Home</a>
@@ -38,6 +32,9 @@
             </li>
             <li>
                 <a class="p-1" href="/projects">Projects</a>
+            </li>
+            <li>
+                <a class="p-1" href="/videos">Videos</a>
             </li>
         </ul>
     </nav>
@@ -83,44 +80,5 @@
             <img id="instagramlogo" src="../../images/instagram_logo.svg" alt="Tapp Builds instagram page">
         </a>
     </footer>
-    <script>
-        let tapemeasuremenu = document.getElementById('tapemeasuremenu');
-        let mainmenu = document.getElementById('mainmenu');
-        mainmenu.style.left = '-400px';
-
-        tapemeasuremenu.addEventListener('click', function(){
-
-            if(mainmenu.style.left == '-400px') {
-                mainmenu.style.left = '0';
-            } else {
-                mainmenu.style.left = '-400px';
-            }
-        });
-
-        // There is an issue with the bfcache that causes the menu state and the project hover state to persist
-        // when the user clicks the back button in their browser. I want it to go back to the original state.
-
-        // Since the user is navigating away from the page, I can try to add an event handler to anchors that
-        // will collapse the menu and ensure the hover state returns on click. I might have to prevent default
-        // and manually follow the location using js. We'll see...
-
-        function handleMenuItemClick(evt) {
-            evt.preventDefault();
-
-            // Get the menu and collapse it.
-            let mainmenu = document.getElementById('mainmenu');
-            mainmenu.style.left = '-400px';
-
-            let AnchorTag = evt.target;
-
-            window.location = AnchorTag.href;
-        }
-
-        let menuAnchors = document.querySelectorAll('#mainmenu a');
-
-        menuAnchors.forEach(menuAnchor => {
-            menuAnchor.addEventListener('click', handleMenuItemClick)
-        });
-    </script>
 </body>
 </html>

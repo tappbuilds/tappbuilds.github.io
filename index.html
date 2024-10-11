@@ -16,28 +16,23 @@
 </head>
 <body>
     <section id="topbar" class="px-1 py-1/2" style="background-color: transparent">
-        <div id="tapemeasuremenu">
-            <div class="long line" style="background-color: white;"></div>
-            <div class="short line" style="background-color: white;"></div>
-            <div class="long line" style="background-color: white;"></div>
-        </div>
+        
         <!-- <div id="tappbuildslandscapelogo" class="homepageheaderlogo">
             <a href="/">
                 <h1><b>TAPP</b>BUILDS</h1>
             </a>
         </div> -->
-        <div style="width: 30px; height: 30px;"></div>
     </section>
-    <nav id="mainmenu" class="homepagemenu"  style="left: -200px">
+    <nav id="mainmenu" class="homepagemenu">
         <ul>
-            <li>
-                <a class="p-1" href="/">Home</a>
-            </li>
             <li>
                 <a class="p-1" href="/about">About</a>
             </li>
             <li>
                 <a class="p-1" href="/projects">Projects</a>
+            </li>
+            <li>
+                <a class="p-1" href="/videos">Videos</a>
             </li>
         </ul>
     </nav>
@@ -66,21 +61,6 @@
         </a>
     </footer>
     <script>
-        let tapemeasuremenu = document.getElementById('tapemeasuremenu');
-        let mainmenu = document.getElementById('mainmenu');
-        var heroOverlay = document.getElementById('hero-overlay');
-        mainmenu.style.left = '-400px';
-
-        tapemeasuremenu.addEventListener('click', function(){
-
-            if(mainmenu.style.left == '-400px') {
-                mainmenu.style.left = '0';
-            } else {
-                mainmenu.style.left = '-400px';
-            }
-        });
-
-
         // There is an issue with the bfcache that causes the menu state and the project hover state to persist
         // when the user clicks the back button in their browser. I want it to go back to the original state.
 
@@ -107,15 +87,9 @@
             window.location = AnchorTag.href;
         }
 
-        let menuAnchors = document.querySelectorAll('#mainmenu a');
         let projectGridAnchors = document.querySelectorAll('#projects a');
-
-        menuAnchors.forEach(menuAnchor => {
-            menuAnchor.addEventListener('click', handleMenuItemClick)
-        });
         
         projectGridAnchors.forEach(projectGridAnchor => {
-            console.log(projectGridAnchor);
             projectGridAnchor.addEventListener('click', handleMenuItemClick)
         });
 

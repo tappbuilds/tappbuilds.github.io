@@ -79,7 +79,7 @@ p, li {
     width: 100vw;
     display: flex;
     z-index: 9999;
-    justify-content: space-between;
+    justify-content: center;
     background-color:white;
 }
 
@@ -103,7 +103,7 @@ p, li {
 }
 
 .topbarunderlay {
-    height: 55px;
+    height: 100px;
 }
 
 #tapemeasuremenu {
@@ -133,15 +133,13 @@ p, li {
 
 nav {
     position: fixed;
-    width: 200px;
-    height: 100vh;
-    background-color: #FFF;
     color: #000;
     z-index: 9999;
-    top:52px;
-    left: -200px;
-    transition: left .5s;
-    box-shadow: 1px 2px 2px 2px rgba(0,0,0,0.2);
+    top: 2rem;
+    display: flex;
+    width: 100vw;
+    justify-content:center;
+    background-color: white;
 }
 
 nav#mainmenu.homepagemenu {
@@ -152,6 +150,7 @@ nav#mainmenu.homepagemenu {
 
 nav ul {
     list-style: none;
+    display:flex;
 }
 
 nav ul a {
@@ -173,6 +172,11 @@ nav#mainmenu.homepagemenu ul a {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#main video {
+    max-width:960px;
+    margin: auto;
 }
 
 .projectImages {
@@ -283,6 +287,10 @@ nav#mainmenu.homepagemenu ul a {
 #projectsFlex {
     width: 100%;
     max-width: 960px;
+}
+
+#projectsGrid, #projectsFlex {
+    padding: 4rem;
 }
 
 #projects {
@@ -459,10 +467,6 @@ footer #instagramlogo {
     .three-col-grid {
         gap: 5rem;
     }
-
-    #projectsGrid, #projectsFlex {
-        padding: 4rem;
-    }
 }
 
 @media screen and (width < 769px) {
@@ -484,27 +488,31 @@ footer #instagramlogo {
     }
 }
 
+@media screen and (width < 674px) {
+    .three-col-flex {
+        gap: 3rem;
+    }
+}
+
+@media screen and (width < 658px) {
+    .three-col-flex .img-square {
+        width: 320px;
+        height: 320px;
+    }
+
+    .three-col-flex {
+        gap: 2rem;
+    }
+}
+
 @media screen and (width < 431px) {
     .three-col-grid, .compact-three-col-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
 
-    #projectsGrid, #projectsFlex {
-        padding: 0;
-    }
-
     #projects .three-col-grid {
         gap: 1rem;
-    }
-
-    .three-col-flex {
-        gap: 2rem;
-    }
-
-    .three-col-flex .img-square {
-        width: 320px;
-        height: 320px;
     }
 
     footer>* {
